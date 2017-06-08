@@ -1,0 +1,59 @@
+git init初始化git仓库
+
+mkdir "xxx" 创建“xxx”文件
+
+git config --global user.name "yourname"
+
+git config --global user.email "youremail"
+
+git add "某某文件"  向仓库添加某某文件
+
+git commit -m "提交文件的说明"  提交文件并附加说明
+
+git status 查看仓库当前状态
+
+git diff 参看修改内容
+
+git diff HEAD --fileName 参看工作区和版本库里面最新版本的区别
+
+git log（git log --pretty=oneline）查看各个版本
+
+cat 文件 参看该文件内的内容
+
+git reset --hard HEAD~1  版本回退到第2个版本
+
+git reset HEAD fileName 文件从暂存区返回到工作区
+
+git checkout -- fileName 撤销文件修改
+
+rm fileName 删除指定文件
+
+删除暂存区文件（git rm fileName)(git commit -m "说明")
+
+git remote add origin git@github.com:gethardup/learngit.git  (getgardup:github昵称，learngit本地git仓库）
+
+git clone git@github.com:michaelliao/gitskills.git （同上）
+
+git push (-u) origin master 向远程仓库推送(当远程仓库是空的时候加-u)
+
+ssh-keygen -t rsa -C 你的邮箱   设置密钥
+
+git checkout -b dev 创建新分支dev并切换到dev相当于两条命令（git branch dev  git checkout dev）
+
+git branch 查看当前分支
+
+git merge dev 合并分支dev到当前分支
+
+git merge --no-ff -m "shuoming" dev  禁止fast forwrad合并分支dev到当前分支
+
+git branch -d dev 删除dev分支
+
+git log --graph --pretty=oneline --abbrev-commit
+
+git stash 储藏当前工作现场
+
+git stash list 查看储藏工作现场列表
+
+git stash pop 恢复并删除stash内容
+
+git stash apply@{0}    git stash drop
